@@ -74,7 +74,7 @@
         <a class="btn" href="#flights">Start Searching</a>
       </div>
 
-      <!-- ✅ Flight Search with IATA Codes -->
+      <!-- ✅ Updated Flight Search with Select Dropdowns -->
       <div class="search-card card" id="flights" aria-label="Flight search">
         <div class="radio-group">
           <label>Trip type</label>
@@ -85,13 +85,42 @@
         <div class="search-row">
           <div class="col">
             <label>Flying from</label>
-            <input type="text" id="from" placeholder="Departure Airport" />
-            <input type="text" id="fromCode" maxlength="3" placeholder="IATA Code (e.g. LHR)" style="margin-top:6px;text-transform:uppercase;" />
+            <select id="from">
+              <option value="">Select Departure</option>
+              <option value="LHR">London Heathrow (LHR)</option>
+              <option value="LGW">London Gatwick (LGW)</option>
+              <option value="JFK">New York JFK (JFK)</option>
+              <option value="EWR">New York Newark (EWR)</option>
+              <option value="DXB">Dubai International (DXB)</option>
+              <option value="DEL">Delhi (DEL)</option>
+              <option value="BOM">Mumbai (BOM)</option>
+              <option value="ISB">Islamabad (ISB)</option>
+              <option value="LHE">Lahore (LHE)</option>
+              <option value="KHI">Karachi (KHI)</option>
+              <option value="DOH">Doha (DOH)</option>
+              <option value="IST">Istanbul (IST)</option>
+              <option value="SIN">Singapore (SIN)</option>
+            </select>
           </div>
+
           <div class="col">
             <label>Fly to</label>
-            <input type="text" id="to" placeholder="Destination Airport" />
-            <input type="text" id="toCode" maxlength="3" placeholder="IATA Code (e.g. JFK)" style="margin-top:6px;text-transform:uppercase;" />
+            <select id="to">
+              <option value="">Select Destination</option>
+              <option value="LHR">London Heathrow (LHR)</option>
+              <option value="LGW">London Gatwick (LGW)</option>
+              <option value="JFK">New York JFK (JFK)</option>
+              <option value="EWR">New York Newark (EWR)</option>
+              <option value="DXB">Dubai International (DXB)</option>
+              <option value="DEL">Delhi (DEL)</option>
+              <option value="BOM">Mumbai (BOM)</option>
+              <option value="ISB">Islamabad (ISB)</option>
+              <option value="LHE">Lahore (LHE)</option>
+              <option value="KHI">Karachi (KHI)</option>
+              <option value="DOH">Doha (DOH)</option>
+              <option value="IST">Istanbul (IST)</option>
+              <option value="SIN">Singapore (SIN)</option>
+            </select>
           </div>
         </div>
 
@@ -169,15 +198,15 @@
     document.getElementById('year').innerText = new Date().getFullYear();
 
     document.getElementById('searchBtn').addEventListener('click', function(){
-      const from = document.getElementById('from').value.trim();
-      const to = document.getElementById('to').value.trim();
-      const fromCode = document.getElementById('fromCode').value.trim().toUpperCase();
-      const toCode = document.getElementById('toCode').value.trim().toUpperCase();
+      const fromCode = document.getElementById('from').value;
+      const toCode = document.getElementById('to').value;
+      const from = document.getElementById('from').options[document.getElementById('from').selectedIndex].text;
+      const to = document.getElementById('to').options[document.getElementById('to').selectedIndex].text;
       const depart = document.getElementById('depart').value;
       const trip = document.querySelector('input[name=trip]:checked').value;
 
-      if(!from || !to || !depart || !fromCode || !toCode){
-        alert('Please enter airports, IATA codes, and departure date.');
+      if(!fromCode || !toCode || !depart){
+        alert('Please select airports and a departure date.');
         return;
       }
 
@@ -188,8 +217,7 @@
 </body>
 </html>
 
-     
-      
+
 
 
 
