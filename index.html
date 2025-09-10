@@ -3,56 +3,173 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flight Results — Travel Portal</title>
+  <title>Travel Portal — Demo</title>
+  <meta name="description" content="Simple travel portal demo: flight search, hero background, featured airlines, contact." />
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #222;}
-    header {background: #0073e6; color: #fff; padding: 16px;}
-    header h1 {margin: 0; font-size: 22px;}
-    .container {max-width: 900px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);}
-    h2 {margin-bottom: 12px;}
-    .flight {border-bottom: 1px solid #ddd; padding: 12px 0;}
-    .flight:last-child {border-bottom: none;}
-    .flight strong {font-size: 16px;}
-    .price {color: #0073e6; font-weight: bold; float: right;}
-    .back-link {display: inline-block; margin-top: 20px; text-decoration: none; color: #0073e6; font-weight: bold;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.4;color:#222}
+    a{color:inherit;text-decoration:none}
+
+    .header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,0.95);backdrop-filter:blur(4px);border-bottom:1px solid rgba(0,0,0,0.05)}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:36px}
+    .nav-links{display:flex;gap:22px;align-items:center}
+    .cta{background:#7cc02a;padding:8px 14px;border-radius:4px;color:#fff;font-weight:600}
+
+    .hero{height:620px;display:flex;align-items:center;position:relative;margin-top:68px;overflow:hidden;color:#fff;text-align:left}
+    .hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;filter:brightness(0.6);z-index:-1}
+
+    .hero-inner{max-width:1200px;margin:0 auto;padding:40px 20px;display:flex;gap:30px;align-items:flex-start}
+    .hero-left{flex:1}
+    .hero-left h1{font-size:48px;margin-bottom:12px}
+    .hero-left p{opacity:0.9;margin-bottom:20px}
+
+    .search-card{width:100%;max-width:600px;background:#0073e6;padding:22px;border-radius:6px;color:#000;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+    .search-row{display:flex;gap:12px;margin-bottom:12px}
+    .search-row .col{flex:1}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#000;font-weight:bold}
+    input[type=text],select,input[type=date]{width:100%;padding:10px;border-radius:4px;border:1px solid #ccc;background:#fff;color:#000;font-weight:bold}
+    .radio-group{display:flex;gap:12px;align-items:center;margin-bottom:10px;color:#000;font-weight:bold}
+    .search-actions{text-align:right;margin-top:8px}
+    .btn{background:#7cc02a;border:none;padding:11px 18px;border-radius:4px;font-weight:700;cursor:pointer;color:#fff}
+
+    .section{padding:60px 20px}
+    .about{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+    .about .text{flex:1;min-width:280px}
+    .card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(10,30,60,0.06)}
+    .airline-img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+
+    footer{background:#0b2b3b;color:#d9eef5;padding:24px}
+    footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+
+    @media (max-width:980px){
+      .hero{height:auto;padding:60px 0}
+      .hero-inner{flex-direction:column;align-items:center;text-align:center}
+      .hero-left h1{font-size:36px}
+      .search-card{max-width:100%}
+    }
+    @media (max-width:600px){
+      .nav-links{display:none}
+      .brand img{height:28px}
+      .hero-left h1{font-size:28px}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Travel Portal — Flight Results</h1>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="https://via.placeholder.com/100x36?text=Logo" alt="Travel Portal logo" />
+        <strong>Travel Portal</strong>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#flights">Flights</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <h2>Available Flights</h2>
-    <div id="results"></div>
-    <a href="index.html" class="back-link">← Back to Search</a>
-  </div>
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1>Find Great Flight Deals</h1>
+        <p>Search and compare cheap flights from hundreds of airlines. Fast booking & great support.</p>
+        <a class="btn" href="#flights">Start Searching</a>
+      </div>
+
+      <div class="search-card card" id="flights" aria-label="Flight search">
+        <div class="radio-group">
+          <label>Trip type</label>
+          <label><input type="radio" name="trip" value="return" checked> Return</label>
+          <label><input type="radio" name="trip" value="oneway"> One way</label>
+        </div>
+
+        <div class="search-row">
+          <div class="col">
+            <label>Flying from</label>
+            <input type="text" id="from" placeholder="Departure Airport" />
+          </div>
+          <div class="col">
+            <label>Fly to</label>
+            <input type="text" id="to" placeholder="Destination Airport" />
+          </div>
+        </div>
+
+        <div class="search-row">
+          <div class="col">
+            <label>Departure date</label>
+            <input type="date" id="depart" />
+          </div>
+          <div class="col">
+            <label>Return date</label>
+            <input type="date" id="return" />
+          </div>
+        </div>
+
+        <div class="search-row">
+          <div class="col">
+            <label>Passengers</label>
+            <select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+          </div>
+          <div class="col">
+            <label>Class</label>
+            <select id="cls"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First</option></select>
+          </div>
+        </div>
+
+        <div class="search-actions">
+          <button class="btn" id="searchBtn">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="text">
+        <h2>About Us</h2>
+        <p>We are a travel gateway offering flights, hotels and holiday packages. This demo page shows a clean hero search, responsive layout and simple components you can extend.</p>
+        <p>To connect to a live booking service, you'll replace the search handler with calls to your API or to a metasearch provider (Skyscanner API, Amadeus, TravelFusion, etc.).</p>
+      </div>
+
+      <div style="width:320px">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="airline" class="airline-img">
+          <h4 style="margin-top:12px">Featured Airline</h4>
+          <p style="font-size:14px;color:#666">Great deals with major carriers. Book with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Travel Portal — All rights reserved</div>
+      <div>Contact: <a href="mailto:info@travelportal.example">info@travelportal.example</a></div>
+    </div>
+  </footer>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const from = params.get("from");
-    const to = params.get("to");
-    const depart = params.get("depart");
-
-    const dummyFlights = [
-      {airline: "Delta Airlines", time: "08:30", price: "$350"},
-      {airline: "United Airlines", time: "11:45", price: "$420"},
-      {airline: "American Airlines", time: "16:00", price: "$390"},
-      {airline: "JetBlue", time: "19:20", price: "$310"}
-    ];
-
-    document.getElementById("results").innerHTML = `
-      <p><b>Route:</b> ${from} → ${to}</p>
-      <p><b>Departure:</b> ${depart}</p>
-      <hr>
-      ${dummyFlights.map(f => `
-        <div class="flight">
-          <strong>${f.airline}</strong> — ${from} → ${to}, ${f.time}
-          <span class="price">${f.price}</span>
-        </div>
-      `).join("")}
-    `;
+    document.getElementById('year').innerText = new Date().getFullYear();
+    document.getElementById('searchBtn').addEventListener('click', function(){
+      const from = document.getElementById('from').value.trim();
+      const to = document.getElementById('to').value.trim();
+      const depart = document.getElementById('depart').value;
+      const trip = document.querySelector('input[name=trip]:checked').value;
+      if(!from || !to || !depart){
+        alert('Please enter departure, destination and departure date.');
+        return;
+      }
+      const qs = new URLSearchParams({from,to,depart,trip});
+      window.location.href = 'search-results.html?'+qs.toString();
+    });
   </script>
 </body>
 </html>
+
+
 
