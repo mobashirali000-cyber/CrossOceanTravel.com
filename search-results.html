@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flight Results — Travel Portal</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #222;}
+    header {background: #0073e6; color: #fff; padding: 16px;}
+    header h1 {margin: 0; font-size: 22px;}
+    .container {max-width: 900px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);}
+    h2 {margin-bottom: 12px;}
+    .flight {border-bottom: 1px solid #ddd; padding: 12px 0;}
+    .flight:last-child {border-bottom: none;}
+    .flight strong {font-size: 16px;}
+    .price {color: #0073e6; font-weight: bold; float: right;}
+    .back-link {display: inline-block; margin-top: 20px; text-decoration: none; color: #0073e6; font-weight: bold;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Travel Portal — Flight Results</h1>
+  </header>
+
+  <div class="container">
+    <h2>Available Flights</h2>
+    <div id="results"></div>
+    <a href="index.html" class="back-link">← Back to Search</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+    const to = params.get("to");
+    const depart = params.get("depart");
+
+    const dummyFlights = [
+      {airline: "Delta Airlines", time: "08:30", price: "$350"},
+      {airline: "United Airlines", time: "11:45", price: "$420"},
+      {airline: "American Airlines", time: "16:00", price: "$390"},
+      {airline: "JetBlue", time: "19:20", price: "$310"}
+    ];
+
+    document.getElementById("results").innerHTML = `
+      <p><b>Route:</b> ${from} → ${to}</p>
+      <p><b>Departure:</b> ${depart}</p>
+      <hr>
+      ${dummyFlights.map(f => `
+        <div class="flight">
+          <strong>${f.airline}</strong> — ${from} → ${to}, ${f.time}
+          <span class="price">${f.price}</span>
+        </div>
+      `).join("")}
+    `;
+  </script>
+</body>
+</html>
