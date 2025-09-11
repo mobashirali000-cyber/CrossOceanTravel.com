@@ -37,7 +37,6 @@
         .airline-img{width:100%;height:140px;object-fit:cover;border-radius:6px}
         footer{background:#0b2b3b;color:#d9eef5;padding:24px}
         footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        
         /* New Styles for Flight Results and Autocomplete */
         .results-container {
             max-width: 900px;
@@ -145,7 +144,6 @@
             color: #666;
             padding: 40px;
         }
-
         .autocomplete-container {
             position: relative;
         }
@@ -171,7 +169,25 @@
         .autocomplete-items div:hover {
             background-color: #e9e9e9;
         }
-
+        /* New CSS for Hamburger Menu */
+        .hamburger {
+            display: none; /* Hidden on large screens */
+            cursor: pointer;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            z-index: 70;
+            position: relative;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #222;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            border-radius: 2px;
+        }
         @media (max-width:980px){
             .hero{height:auto;padding:60px 0}
             .hero-inner{flex-direction:column;align-items:center;text-align:center}
@@ -181,9 +197,38 @@
             .flight-times{flex-direction:column;align-items:flex-start;margin-left:0;margin-top:15px}
         }
         @media (max-width:600px){
-            .nav-links{display:none}
-            .brand img{height:28px}
-            .hero-left h1{font-size:28px}
+            .nav {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                display: none; /* Initially hidden on mobile */
+                width: 100%;
+                flex-direction: column;
+                background: rgba(255,255,255,0.95);
+                backdrop-filter: blur(4px);
+                position: absolute;
+                top: 68px; /* Below the header */
+                left: 0;
+                padding: 10px 20px;
+                border-top: 1px solid rgba(0,0,0,0.05);
+            }
+            .nav-links a {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                font-weight: bold;
+            }
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            .nav-links.active {
+                display: flex; /* Show when active */
+            }
+            .hamburger {
+                display: block; /* Show the hamburger button */
+            }
+            .header {
+                height: 68px;
+            }
         }
     </style>
 </head>
@@ -193,12 +238,18 @@
             <div class="brand">
                 <strong>Cross Ocean travel</strong>
             </div>
-            <nav class="nav-links">
+            <nav class="nav-links" id="nav-links">
                 <a href="#">Home</a>
                 <a href="#flights">Flights</a>
                 <a href="#about">About</a>
                 <a class="cta" href="contact.html">Contact</a>
             </nav>
+            <!-- Hamburger menu button -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
@@ -209,7 +260,6 @@
                 <p>Search and compare cheap flights from hundreds of airlines. Fast booking & great support.</p>
                 <a class="btn" href="#flights">Start Searching</a>
             </div>
-
             <div class="search-card card" id="flights" aria-label="Flight search">
                 <div id="validation-message" class="message-box"></div>
                 <div class="radio-group">
@@ -217,7 +267,6 @@
                     <label><input type="radio" name="trip" value="return" checked> Return</label>
                     <label><input type="radio" name="trip" value="oneway"> One way</label>
                 </div>
-
                 <div class="search-row">
                     <div class="col">
                         <label>Flying from</label>
@@ -226,7 +275,6 @@
                             <div id="from-autocomplete-list" class="autocomplete-items"></div>
                         </div>
                     </div>
-
                     <div class="col">
                         <label>Fly to</label>
                         <div class="autocomplete-container">
@@ -235,7 +283,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="search-row">
                     <div class="col">
                         <label>Departure date</label>
@@ -246,7 +293,6 @@
                         <input type="date" id="return" />
                     </div>
                 </div>
-
                 <div class="search-row">
                     <div class="col">
                         <label>Passengers</label>
@@ -257,14 +303,12 @@
                         <select id="cls"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First</option></select>
                     </div>
                 </div>
-
                 <div class="search-actions">
                     <button class="btn" id="searchBtn">Search</button>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Results Section (Initially Hidden) -->
     <section class="section" id="results-section" style="display: none;">
         <div class="container">
@@ -315,9 +359,18 @@
         const resultsInfo = document.getElementById('results-info');
         const validationMessage = document.getElementById('validation-message');
 
-        // References for the new feature
+        // References for the new features
         const tripTypeRadios = document.querySelectorAll('input[name="trip"]');
         const returnDateColumn = document.getElementById('return-date-column');
+
+        // References for the new hamburger menu
+        const hamburgerBtn = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        // Event listener for the hamburger button
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
         // Sample data to simulate an API response
         const dummyFlightData = [
@@ -434,11 +487,9 @@
                 let a, b, val = this.value;
                 closeAllLists(inputElement);
                 if (!val) { return false; }
-                
                 a = document.createElement("div");
                 a.setAttribute("class", "autocomplete-items");
                 listContainer.appendChild(a);
-                
                 // Loop through all airports and create a div for each match
                 for (let i = 0; i < airports.length; i++) {
                     const option = airports[i];
@@ -453,13 +504,11 @@
                     }
                 }
             });
-
             // Close the autocomplete list when the user clicks outside of it
             document.addEventListener("click", function (e) {
                 closeAllLists(e.target);
             });
         }
-
         function closeAllLists(exceptThisOne) {
             const items = document.getElementsByClassName("autocomplete-items");
             for (let i = 0; i < items.length; i++) {
@@ -468,12 +517,10 @@
                 }
             }
         }
-
         // Apply autocomplete to both from and to inputs
         const fromInput = document.getElementById('from');
         const fromList = document.getElementById('from-autocomplete-list');
         setupAutocomplete(fromInput, fromList);
-
         const toInput = document.getElementById('to');
         const toList = document.getElementById('to-autocomplete-list');
         setupAutocomplete(toInput, toList);
@@ -496,12 +543,10 @@
         // Function to generate the flight result cards
         function generateFlightResults(flights) {
             flightResultsContainer.innerHTML = '';
-            
             if (flights.length === 0) {
                 flightResultsContainer.innerHTML = '<p class="no-flights-message">No flights found for this route. Please try a different search.</p>';
                 return;
             }
-
             flights.forEach(flight => {
                 const flightCardHTML = `
                     <div class="flight-card">
@@ -535,7 +580,7 @@
                 flightResultsContainer.insertAdjacentHTML('beforeend', flightCardHTML);
             });
         }
-        
+
         // Event listener for the trip type radio buttons
         tripTypeRadios.forEach(radio => {
             radio.addEventListener('change', function() {
@@ -553,31 +598,25 @@
             const fromInput = document.getElementById('from');
             const toInput = document.getElementById('to');
             const depart = document.getElementById('depart');
-            
             // Validate that required fields are selected
             if (!fromInput.value || !toInput.value || !depart.value){
                 validationMessage.textContent = 'Please select airports and a departure date.';
                 validationMessage.style.display = 'block';
                 return;
             }
-            
             // Hide the validation message
             validationMessage.style.display = 'none';
-            
             // Extract the IATA codes from the input values
             const fromCode = (fromInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
             const toCode = (toInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
             const departDate = depart.value;
-            
             // Filter the dummy data based on user selection
             const filteredFlights = dummyFlightData.filter(flight => {
                 return flight.departureAirport === fromCode && flight.arrivalAirport === toCode && flight.date === departDate;
             });
-            
             // Update the results header with the selected information
             resultsTitle.textContent = `${fromInput.value} to ${toInput.value}`;
             resultsInfo.textContent = `Departing on ${depart.value}`;
-            
             // Generate and show the results
             generateFlightResults(filteredFlights);
             showResults();
