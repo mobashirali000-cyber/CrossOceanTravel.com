@@ -31,10 +31,11 @@
         .search-actions{text-align:right;margin-top:8px}
         .btn{background:#7cc02a;border:none;padding:11px 18px;border-radius:4px;font-weight:700;cursor:pointer;color:#fff}
         .section{padding:60px 20px}
-        .about{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+        .about{display:flex;flex-wrap: wrap;justify-content: space-between; gap:28px;align-items:flex-start}
         .about .text{flex:1;min-width:280px}
         .card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(10,30,60,0.06)}
         .airline-img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+        .featured-card{flex-basis: 320px; min-width: 280px;}
         footer{background:#0b2b3b;color:#d9eef5;padding:24px}
         footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
         /* New Styles for Flight Results and Autocomplete */
@@ -379,15 +380,15 @@
                     <p><strong>Affordability & Value:</strong> We strive to provide the best possible prices without compromising on quality or service, ensuring you get great value for your investment.</p>
                     <p><strong>Seamless Experience:</strong> We take care of all the details, both big and small, so you can embark on your journey with confidence and excitement.</p>
                 </div>
-               
+                <div class="team-image">
+                    <img src="https://images.unsplash.com/photo-1549646535-b2861c28b556?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team members smiling">
+                </div>
             </div>
             
-            <div style="width:320px">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="airline" class="airline-img">
-                    <h4 style="margin-top:12px">Featured Airline</h4>
-                    <p style="font-size:14px;color:#666">Great deals with major carriers. Book with confidence.</p>
-                </div>
+            <div class="card featured-card">
+                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="airline" class="airline-img">
+                <h4 style="margin-top:12px">Featured Airline</h4>
+                <p style="font-size:14px;color:#666">Great deals with major carriers. Book with confidence.</p>
             </div>
         </div>
     </section>
@@ -395,7 +396,7 @@
     <footer>
         <div class="container">
             <div>© <span id="year"></span> Travel Portal — All rights reserved</div>
-            <div>Contact: <a href="mailto:mubashir@crossoceantravel>mubashir@crossoceantravel</a></div>
+            <div>Contact: <a href="mailto:info@travelportal.example">info@travelportal.example</a></div>
         </div>
     </footer>
 
@@ -533,6 +534,23 @@
             "Singapore (SIN)"
         ];
 
+        // New map to easily get IATA code from airport name
+        const airportsMap = {
+            "London Heathrow (LHR)": "LHR",
+            "London Gatwick (LGW)": "LGW",
+            "New York JFK (JFK)": "JFK",
+            "New York Newark (EWR)": "EWR",
+            "Dubai International (DXB)": "DXB",
+            "Delhi (DEL)": "DEL",
+            "Mumbai (BOM)": "BOM",
+            "Islamabad (ISB)": "ISB",
+            "Lahore (LHE)": "LHE",
+            "Karachi (KHI)": "KHI",
+            "Doha (DOH)": "DOH",
+            "Istanbul (IST)": "IST",
+            "Singapore (SIN)": "SIN"
+        };
+
         // --- Custom Autocomplete Logic ---
         function setupAutocomplete(inputElement, listContainer) {
             inputElement.addEventListener('input', function(e) {
@@ -658,9 +676,10 @@
             }
             // Hide the validation message
             validationMessage.style.display = 'none';
-            // Extract the IATA codes from the input values
-            const fromCode = (fromInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
-            const toCode = (toInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
+            // Use the airport map to get the IATA codes from the input values
+            // This is a more robust way to handle user input whether they use autocomplete or not.
+            const fromCode = airportsMap[fromInput.value] || (fromInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
+            const toCode = airportsMap[toInput.value] || (toInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
             const departDate = depart.value;
             // Filter the dummy data based on user selection
             const filteredFlights = dummyFlightData.filter(flight => {
@@ -687,4 +706,3 @@
     </script>
     </body>
 </html>
-    
