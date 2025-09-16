@@ -1,80 +1,44 @@
 <!doctype html>
-<header>
-    <!-- Cross Ocean Travel Logo -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="200" height="75">
-  <!-- "C" -->
-  <text x="20" y="100" font-family="Arial, sans-serif" font-size="100" fill="#00bcd4">C</text>
-
-  <!-- Globe inside "O" -->
-  <circle cx="160" cy="75" r="45" fill="#4caf50" stroke="#00bcd4" stroke-width="5" />
-  <!-- Simplified continents -->
-  <path d="M140 65 L150 60 L155 75 L150 90 L140 85 Z" fill="#fdd835" />
-  <path d="M170 65 L180 60 L185 75 L180 90 L170 85 Z" fill="#fdd835" />
-  <!-- Slash through globe -->
-  <line x1="120" y1="100" x2="200" y2="50" stroke="#00bcd4" stroke-width="5" />
-
-  <!-- "T" with plane -->
-  <text x="230" y="100" font-family="Arial, sans-serif" font-size="100" fill="#00bcd4">T</text>
-  <!-- Airplane shape -->
-  <path d="M300 35 l20 5 -20 5 5 10 -5 0 -5 -10 -20 -5 20 -5 -5 -10 5 0z" fill="#00bcd4" />
-
-  <!-- Subtext -->
-  <text x="60" y="135" font-family="Arial, sans-serif" font-size="20" fill="#00bcd4" letter-spacing="3">
-    CROSS OCEAN TRAVEL
-  </text>
-</svg>
-<header>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cross ocean travel</title>
-    <meta name="description" content="Simple travel portal demo: flight search, hero background, featured airlines, contact." />
-    <head>
-        <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
     <title>Cross Ocean Travel | Cheap Flights, Holiday Packages & Pilgrimages</title>
     <meta name="description" content="Find cheap flights, holiday packages, and spiritual pilgrimages with Cross Ocean Travel. Compare deals from hundreds of airlines and book your dream trip easily." />
     <meta name="keywords" content="cheap flights, holiday packages, spiritual pilgrimages, Cross Ocean Travel, travel deals, airline tickets, book flights online" />
     <meta name="author" content="Cross Ocean Travel" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="en" />
-    <link rel="canonical" href="https://www.crossoceantravel.example/" />
+    <link rel="canonical" href="https://www.crossoceantravel.co.uk/" />
 
-    <!-- Open Graph (OG) tags for social sharing -->
     <meta property="og:title" content="Cross Ocean Travel | Cheap Flights, Holiday Packages & Pilgrimages" />
     <meta property="og:description" content="Find cheap flights, holiday packages, and spiritual pilgrimages with Cross Ocean Travel." />
-    <meta property="og:image" content="https://www.crossoceantravel.example/images/og-image.jpg" />
-    <meta property="og:url" content="https://www.crossoceantravel.example/" />
+    <meta property="og:image" content="https://www.crossoceantravel.co.uk/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.crossoceantravel.co.uk/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cross Ocean Travel" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cross Ocean Travel | Cheap Flights, Holiday Packages & Pilgrimages" />
     <meta name="twitter:description" content="Find cheap flights, holiday packages, and spiritual pilgrimages with Cross Ocean Travel." />
-    <meta name="twitter:image" content="https://www.crossoceantravel.example/images/og-image.jpg" />
+    <meta name="twitter:image" content="https://www.crossoceantravel.com/images/og-image.jpg" />
     <meta name="twitter:site" content="@YourTwitterHandle" />
 
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Schema.org JSON-LD structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TravelAgency",
       "name": "Cross Ocean Travel",
-      "url": "https://www.crossoceantravel.example/",
-      "logo": "https://www.crossoceantravel.example/images/logo.png",
+      "url": "https://www.crossoceantravel.com/",
+      "logo": "https://www.crossoceantravel.co.uk/images/logo.png",
       "description": "We offer cheap flights, holiday packages, and spiritual pilgrimages worldwide.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-800-123-4567",
+        "telephone": "0203-925-5009"
         "contactType": "customer service",
-        "email": "info@travelportal.example"
+        "email": "mubashir@crossoceantravel.co.uk"
       },
       "sameAs": [
         "https://www.facebook.com/yourpage",
@@ -84,265 +48,501 @@
     }
     </script>
 
-    <!-- Existing CSS here -->
     <style>
-      /* your existing styles */
-    </style>
-</head>
-
-    <style>
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:Arial,Helvetica,sans-serif;line-height:1.4;color:#222}
-        a{color:inherit;text-decoration:none}
-        .header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,0.95);backdrop-filter:blur(4px);border-bottom:1px solid rgba(0,0,0,0.05)}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-        .brand{display:flex;align-items:center;gap:10px}
-        .brand img{height:36px}
-        .nav-links{display:flex;gap:22px;align-items:center}
-        .cta{background:#7cc02a;padding:8px 14px;border-radius:4px;color:#fff;font-weight:600}
-        .hero{height:620px;display:flex;align-items:center;position:relative;margin-top:68px;overflow:hidden;color:#fff;text-align:left}
-        .hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;filter:brightness(0.6);z-index:-1}
-        .hero-inner{max-width:1200px;margin:0 auto;padding:40px 20px;display:flex;gap:30px;align-items:flex-start}
-        .hero-left{flex:1}
-        .hero-left h1{font-size:48px;margin-bottom:12px}
-        .hero-left p{opacity:0.9;margin-bottom:20px}
-        .search-card{width:100%;max-width:600px;background:#0073e6;padding:22px;border-radius:6px;color:#000;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
-        .search-row{display:flex;gap:12px;margin-bottom:12px}
-        .search-row .col{flex:1}
-        label{display:block;font-size:13px;margin-bottom:6px;color:#000;font-weight:bold}
-        input[type=text],select,input[type=date]{width:100%;padding:10px;border-radius:4px;border:1px solid #ccc;background:#fff;color:#000;font-weight:bold}
-        .radio-group{display:flex;gap:12px;align-items:center;margin-bottom:10px;color:#000;font-weight:bold}
-        .search-actions{text-align:right;margin-top:8px}
-        .btn{background:#7cc02a;border:none;padding:11px 18px;border-radius:4px;font-weight:700;cursor:pointer;color:#fff}
-        .section{padding:60px 20px}
-        .about{display:flex;flex-wrap: wrap;justify-content: space-between; gap:28px;align-items:flex-start}
-        .about .text{flex:1;min-width:280px}
-        .card{background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(10,30,60,0.06)}
-        .airline-img{width:100%;height:140px;object-fit:cover;border-radius:6px}
-        .featured-card{flex-basis: 320px; min-width: 280px;}
-        footer{background:#0b2b3b;color:#d9eef5;padding:24px}
-        footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-        /* New Styles for Flight Results and Autocomplete */
-        .results-container {
-            max-width: 900px;
-            margin: 0 auto;
+        /* General Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, Helvetica, sans-serif; line-height: 1.4; color: #222; }
+        a { color: inherit; text-decoration: none; }
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 60; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(4px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .brand { display: flex; align-items: center; gap: 10px; }
+        .brand img { height: 36px; }
+        .nav-links { display: flex; gap: 22px; align-items: center; }
+        .cta { background: #7cc02a; padding: 8px 14px; border-radius: 4px; color: #fff; font-weight: 600; }
+        .hero { height: 620px; display: flex; align-items: center; position: relative; margin-top: 68px; overflow: hidden; color: #fff; text-align: left; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover; filter: brightness(0.6); z-index: -1; }
+        .hero-inner { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: flex; gap: 30px; align-items: center; justify-content: center; }
+        .hero-left { flex: 1; display: none; }
+        
+        .search-card { 
+            width: 100%; 
+            max-width: 900px; 
+            background: rgba(255, 255, 255, 0.85); /* Changed background to white with opacity */
+            padding: 22px; 
+            border-radius: 6px; 
+            color: #000; /* Changed font color to black for the card */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
         }
-        .results-header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        .results-header h2 {
-            font-size: 28px;
-            color: #003366;
-            margin-bottom: 8px;
-        }
-        .results-header p {
-            font-size: 16px;
-            color: #666;
-        }
-        .flight-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        
+        /* Flight Search Box Styles */
+        .search-options {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
-        .flight-info, .price-book {
+
+        .trip-type-tabs {
             display: flex;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        .trip-type-tabs label {
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease;
+            color: #000; /* Ensure label text is black */
+        }
+        .trip-type-tabs label:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .trip-type-tabs input[type="radio"] {
+            display: none;
+        }
+        .trip-type-tabs input[type="radio"]:checked + label {
+            background-color: #0073e6;
+            color: #fff;
+        }
+        
+        .search-row { 
+            display: flex; 
+            gap: 12px; 
+            margin-bottom: 12px; 
+        }
+
+        .search-row .col { flex: 1; }
+        label { 
+            display: block; 
+            font-size: 13px; 
+            margin-bottom: 6px; 
+            color: #000; /* Changed label color to black */
+            font-weight: bold; 
+        }
+        input[type=text], select, input[type=date] { 
+            width: 100%; 
+            padding: 10px; 
+            border-radius: 4px; 
+            border: 1px solid #ccc; 
+            background: #fff; 
+            color: #000; 
+            font-weight: bold; 
+        }
+        
+        .search-actions { 
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            margin-top: 10px;
         }
-        .airline-details {
+
+        .search-actions .checkboxes {
             display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 14px;
+        }
+        .search-actions .checkboxes label {
+            color: #000; /* Ensure checkbox text is black */
+        }
+        .search-actions .checkboxes input {
+            margin-right: 5px;
+        }
+
+        .btn { 
+            background: #7cc02a; 
+            border: none; 
+            padding: 11px 18px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            color: #fff; 
+        }
+        
+        .section { padding: 60px 20px; }
+        .about { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+        .about .text { flex: 1; min-width: 280px; }
+        .card { background: #fff; padding: 18px; border-radius: 8px; box-shadow: 0 6px 18px rgba(10, 30, 60, 0.06); }
+        .airline-img { width: 100%; height: 140px; object-fit: cover; border-radius: 6px; }
+        .featured-card { flex-basis: 320px; min-width: 280px; }
+        footer { background: #0b2b3b; color: #d9eef5; padding: 24px; }
+        footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        
+        /* New Styles for Flight Results and Autocomplete */
+        .results-container { max-width: 900px; margin: 0 auto; }
+        .results-header { text-align: center; margin-bottom: 25px; }
+        .results-header h2 { font-size: 28px; color: #003366; margin-bottom: 8px; }
+        .results-header p { font-size: 16px; color: #666; }
+        .flight-card { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .flight-info, .price-book { display: flex; align-items: center; flex-wrap: wrap; }
+        .airline-details { display: flex; flex-direction: column; align-items: center; text-align: center; width: 150px; min-width: 120px; }
+        .airline-details strong { font-size: 16px; }
+        .flight-times { display: flex; align-items: center; gap: 20px; margin-left: 20px; }
+        .flight-leg { text-align: center; }
+        .flight-leg strong { font-size: 20px; display: block; }
+        .flight-leg span { font-size: 12px; color: #666; }
+        .flight-leg .duration { font-size: 14px; color: #7cc02a; font-weight: bold; }
+        .price { font-size: 24px; font-weight: bold; color: #0073e6; }
+        .book-btn { background: #7cc02a; border: none; padding: 10px 18px; border-radius: 4px; color: #fff; font-weight: bold; cursor: pointer; }
+        .back-btn { background: #f0f0f0; color: #222; border: none; padding: 8px 12px; border-radius: 4px; font-size: 14px; cursor: pointer; margin-bottom: 20px; }
+        .message-box { background-color: #ffebee; color: #d32f2f; border: 1px solid #d32f2f; padding: 10px; border-radius: 5px; margin-bottom: 15px; display: none; text-align: center; }
+        .no-flights-message { text-align: center; font-size: 18px; color: #666; padding: 40px; }
+        .autocomplete-container { position: relative; }
+        .autocomplete-items { position: absolute; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99; top: 100%; left: 0; right: 0; background-color: #fff; border-radius: 0 0 4px 4px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .autocomplete-items div { padding: 10px; cursor: pointer; border-bottom: 1px solid #d4d4d4; color: #222; }
+        .autocomplete-items div:hover { background-color: #e9e9e9; }
+        
+        /* New CSS for Hamburger Menu */
+        .hamburger { display: none; cursor: pointer; padding: 10px; background: transparent; border: none; z-index: 70; position: relative; }
+        .hamburger .bar { display: block; width: 25px; height: 3px; background-color: #222; margin: 5px auto; transition: all 0.3s ease-in-out; border-radius: 2px; }
+        
+        /* Styles for the new About Us section */
+        .about-us-content { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+        .about-us-content .text { flex: 2; min-width: 300px; }
+        .about-us-content .team-image { flex: 1; min-width: 200px; max-width: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .about-us-content .team-image img { width: 100%; display: block; }
+        
+        /* Styles for the new Passenger Details form */
+        .passenger-form-card, .booking-form-card { max-width: 700px; margin: 0 auto 20px; padding: 30px; background-color: #f7f7f7; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .passenger-form-card h2, .booking-form-card h2 { margin-bottom: 10px; color: #003366; }
+        .passenger-form-card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+        .form-col { flex: 1; }
+        .form-col-dob { display: flex; gap: 10px; }
+        .form-col-dob select { flex: 1; }
+        .form-group label { color: #000; font-weight: bold; }
+        .required-label::after { content: '*'; color: red; margin-left: 4px; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px; }
+        .form-actions { text-align: center; margin-top: 30px; }
+
+        /* New Flight Card Design */
+        .flight-card.unique {
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 150px;
-            min-width: 120px;
+            align-items: flex-start;
+            padding: 10px 20px;
         }
-        .airline-details strong {
+
+        .flight-segment {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            gap: 20px;
+        }
+        .flight-segment:last-child {
+            border-bottom: none;
+        }
+
+        .segment-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-width: 180px;
+        }
+        .airline-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .segment-center {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 15px;
+            font-size: 14px;
+        }
+        .segment-center strong {
             font-size: 16px;
         }
-        .flight-times {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-left: 20px;
-        }
-        .flight-leg {
-            text-align: center;
-        }
-        .flight-leg strong {
-            font-size: 20px;
-            display: block;
-        }
-        .flight-leg span {
+        .segment-center span {
             font-size: 12px;
             color: #666;
         }
-        .flight-leg .duration {
-            font-size: 14px;
-            color: #7cc02a;
-            font-weight: bold;
-        }
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #0073e6;
-        }
-        .book-btn {
-            background: #7cc02a;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 4px;
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .back-btn {
-            background: #f0f0f0;
-            color: #222;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-        .message-box {
-            background-color: #ffebee;
-            color: #d32f2f;
-            border: 1px solid #d32f2f;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            display: none;
+
+        .stopover-info {
             text-align: center;
-        }
-        .no-flights-message {
-            text-align: center;
-            font-size: 18px;
-            color: #666;
-            padding: 40px;
-        }
-        .autocomplete-container {
-            position: relative;
-        }
-        .autocomplete-items {
-            position: absolute;
-            border: 1px solid #d4d4d4;
-            border-bottom: none;
-            border-top: none;
-            z-index: 99;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: #fff;
-            border-radius: 0 0 4px 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .autocomplete-items div {
-            padding: 10px;
-            cursor: pointer;
-            border-bottom: 1px solid #d4d4d4;
-            color: #222;
-        }
-        .autocomplete-items div:hover {
-            background-color: #e9e9e9;
-        }
-        /* New CSS for Hamburger Menu */
-        .hamburger {
-            display: none; /* Hidden on large screens */
-            cursor: pointer;
-            padding: 10px;
-            background: transparent;
-            border: none;
-            z-index: 70;
-            position: relative;
-        }
-        .hamburger .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #222;
-            margin: 5px auto;
-            transition: all 0.3s ease-in-out;
-            border-radius: 2px;
-        }
-        /* Styles for the new About Us section */
-        .about-us-content {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            min-width: 150px;
         }
-        .about-us-content .text {
-            flex: 2;
-            min-width: 300px;
+        .stopover-info .duration {
+            font-size: 13px;
+            font-weight: bold;
+            color: #7cc02a;
         }
-        .about-us-content .team-image {
-            flex: 1;
-            min-width: 200px;
-            max-width: 350px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        .stopover-info .line {
+            width: 100px;
+            height: 2px;
+            background-color: #0073e6;
+            position: relative;
         }
-        .about-us-content .team-image img {
-            width: 100%;
-            display: block;
+        .stopover-info .line::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #0073e6;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .stopover-info .line::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #0073e6;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .stopover-info .connection {
+            font-size: 12px;
+            color: red;
+            font-weight: bold;
+        }
+        .stopover-info .stop-details {
+            font-size: 12px;
+            color: #666;
         }
 
-        @media (max-width:980px){
-            .hero{height:auto;padding:60px 0}
-            .hero-inner{flex-direction:column;align-items:center;text-align:center}
-            .hero-left h1{font-size:36px}
-            .search-card{max-width:100%}
-            .flight-card{flex-direction:column;align-items:flex-start}
-            .flight-times{flex-direction:column;align-items:flex-start;margin-left:0;margin-top:15px}
-            .about-us-content {
-                flex-direction: column-reverse; /* Put text on top of image on mobile */
-                align-items: center;
-            }
+        .segment-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            min-width: 120px;
         }
-        @media (max-width:600px){
-            .nav {
-                flex-wrap: wrap;
-            }
-            .nav-links {
-                display: none; /* Initially hidden on mobile */
-                width: 100%;
+        .segment-right div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+        .price-col {
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .price-col .price {
+            font-size: 28px;
+            color: #0073e6;
+            font-weight: bold;
+        }
+
+        /* NEW: Styles for Auth Screen */
+        .auth-card {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .auth-card h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        .auth-card .form-group {
+            margin-bottom: 15px;
+        }
+        .auth-card input {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .auth-card .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .auth-card .google-btn {
+            background-color: #f7f7f7;
+            color: #444;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .auth-card .google-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        .auth-card .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #999;
+            margin: 20px 0;
+        }
+        .auth-card .separator::before,
+        .auth-card .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .auth-card .separator:not(:empty)::before {
+            margin-right: .5em;
+        }
+        .auth-card .separator:not(:empty)::after {
+            margin-left: .5em;
+        }
+        .auth-card p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        /* NEW: Styles for Booking Options Screen */
+        .booking-options-card {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .booking-options-card h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        .booking-options-card .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .booking-options-card .btn-group .btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .booking-options-card .btn.secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* NEW: Styles for Contact Pop-up Modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .close-btn {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Passenger Age input styles */
+        .passenger-age-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #000;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        
+        /* New dynamic age dropdown container */
+        .age-select-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .age-select-col {
+            flex: 1;
+        }
+
+        @media (max-width: 980px) {
+            .hero { height: auto; padding: 60px 0; }
+            .hero-inner { flex-direction: column; align-items: center; text-align: center; }
+            .search-card { max-width: 100%; }
+            .search-row { flex-direction: column; }
+            .search-options { flex-direction: column; gap: 10px; }
+            .search-actions { flex-direction: column; gap: 15px; align-items: stretch; }
+            .search-actions .checkboxes { justify-content: center; }
+            .flight-card { flex-direction: column; align-items: flex-start; }
+            .flight-times { flex-direction: column; align-items: flex-start; margin-left: 0; margin-top: 15px; }
+            .about-us-content { flex-direction: column-reverse; align-items: center; }
+            .form-row { flex-direction: column; }
+            .form-col { width: 100%; }
+            .flight-segment {
                 flex-direction: column;
-                background: rgba(255,255,255,0.95);
-                backdrop-filter: blur(4px);
-                position: absolute;
-                top: 68px; /* Below the header */
-                left: 0;
-                padding: 10px 20px;
-                border-top: 1px solid rgba(0,0,0,0.05);
+                align-items: center;
+                text-align: center;
             }
-            .nav-links a {
-                padding: 10px 0;
-                border-bottom: 1px solid rgba(0,0,0,0.05);
-                font-weight: bold;
+            .segment-left, .segment-center, .segment-right {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
-            .nav-links a:last-child {
-                border-bottom: none;
-            }
-            .nav-links.active {
-                display: flex; /* Show when active */
-            }
-            .hamburger {
-                display: block; /* Show the hamburger button */
-            }
-            .header {
-                height: 68px;
-            }
+            .stopover-info { min-width: auto; }
+            .price-col { align-items: center; }
+        }
+        @media (max-width: 600px) {
+            .nav { flex-wrap: wrap; }
+            .nav-links { display: none; width: 100%; flex-direction: column; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(4px); position: absolute; top: 68px; left: 0; padding: 10px 20px; border-top: 1px solid rgba(0, 0, 0, 0.05); }
+            .nav-links a { padding: 10px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.05); font-weight: bold; }
+            .nav-links a:last-child { border-bottom: none; }
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            .header { height: 68px; }
         }
     </style>
 </head>
@@ -350,7 +550,16 @@
     <header class="header">
         <div class="container nav">
             <div class="brand">
-                <strong>Cross Ocean travel</strong>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="100" height="50">
+                  <text x="20" y="100" font-family="Arial, sans-serif" font-size="100" fill="#00bcd4">C</text>
+                  <circle cx="160" cy="75" r="45" fill="#4caf50" stroke="#00bcd4" stroke-width="5" />
+                  <path d="M140 65 L150 60 L155 75 L150 90 L140 85 Z" fill="#fdd835" />
+                  <path d="M170 65 L180 60 L185 75 L180 90 L170 85 Z" fill="#fdd835" />
+                  <line x1="120" y1="100" x2="200" y2="50" stroke="#00bcd4" stroke-width="5" />
+                  <text x="230" y="100" font-family="Arial, sans-serif" font-size="100" fill="#00bcd4">T</text>
+                  <path d="M300 35 l20 5 -20 5 5 10 -5 0 -5 -10 -20 -5 20 -5 -5 -10 5 0z" fill="#00bcd4" />
+                  <text x="60" y="135" font-family="Arial, sans-serif" font-size="20" fill="#00bcd4" letter-spacing="3">CROSS OCEAN TRAVEL</text>
+                </svg>
             </div>
             <nav class="nav-links" id="nav-links">
                 <a href="#">Home</a>
@@ -368,60 +577,137 @@
 
     <section class="hero" id="search-section">
         <div class="hero-inner container">
-            <div class="hero-left">
-                <h1>Find Great Flight Deals</h1>
-                <p>Search and compare cheap flights from hundreds of airlines. Fast booking & great support.</p>
-                <a class="btn" href="#flights">Start Searching</a>
-            </div>
             <div class="search-card card" id="flights" aria-label="Flight search">
+                <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 600; color: #000;">FLIGHT SEARCH</h2>
                 <div id="validation-message" class="message-box"></div>
-                <div class="radio-group">
-                    <label>Trip type</label>
-                    <label><input type="radio" name="trip" value="return" checked> Return</label>
-                    <label><input type="radio" name="trip" value="oneway"> One way</label>
+                
+                <div class="search-row" style="align-items: center; margin-bottom: 25px;">
+                    <div class="col" style="display: flex; gap: 20px; align-items: center;">
+                        <input type="radio" id="return-option" name="trip-type" value="return" checked style="width: auto;">
+                        <label for="return-option" style="margin: 0; font-weight: normal; font-size: 16px; color: #000;">Return</label>
+                        
+                        <input type="radio" id="oneway-option" name="trip-type" value="one-way" style="width: auto;">
+                        <label for="oneway-option" style="margin: 0; font-weight: normal; font-size: 16px; color: #000;">One way</label>
+                    </div>
+                    
+                    <div class="col" style="display: flex; justify-content: flex-end;">
+                        <a href="#" style="color: #000; font-weight: bold; font-size: 16px;">Cross Ocean Travel</a>
+                    </div>
                 </div>
+
                 <div class="search-row">
                     <div class="col">
-                        <label>Flying from</label>
+                        <label>FLYING FROM</label>
                         <div class="autocomplete-container">
-                            <input type="text" id="from" placeholder="Type airport name or code" autocomplete="off" />
+                            <input type="text" id="from" placeholder="Departure Airport" autocomplete="off" />
                             <div id="from-autocomplete-list" class="autocomplete-items"></div>
                         </div>
                     </div>
                     <div class="col">
-                        <label>Fly to</label>
+                        <label>FLYING TO</label>
                         <div class="autocomplete-container">
-                            <input type="text" id="to" placeholder="Type airport name or code" autocomplete="off" />
+                            <input type="text" id="to" placeholder="Destination Airport" autocomplete="off" />
                             <div id="to-autocomplete-list" class="autocomplete-items"></div>
                         </div>
                     </div>
-                </div>
-                <div class="search-row">
                     <div class="col">
-                        <label>Departure date</label>
+                        <label>DEPARTURE DATE</label>
                         <input type="date" id="depart" />
                     </div>
                     <div class="col" id="return-date-column">
-                        <label>Return date</label>
+                        <label>RETURN DATE</label>
                         <input type="date" id="return" />
                     </div>
                 </div>
                 <div class="search-row">
                     <div class="col">
-                        <label>Passengers</label>
-                        <select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
+                        <label>PASSENGERS</label>
+                        <select id="pax">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                    <div class="col" id="pax-age-container">
+                        </div>
+                    <div class="col">
+                        <label>CLASS OF SERVICE</label>
+                        <select id="cls">
+                            <option>Economy</option>
+                            <option>Premium Economy</option>
+                            <option>Business</option>
+                            <option>First</option>
+                        </select>
                     </div>
                     <div class="col">
-                        <label>Class</label>
-                        <select id="cls"><option>Economy</option><option>Premium Economy</option><option>Business</option><option>First</option></select>
+                        <label>AIRLINES:</label>
+                        <input type="text" placeholder="Optional" />
                     </div>
                 </div>
+                
                 <div class="search-actions">
-                    <button class="btn" id="searchBtn">Search</button>
+                    <div class="checkboxes">
+                        <label style="color: #000;"><input type="checkbox" /> Bag only fares</label>
+                        <label style="color: #000;"><input type="checkbox" /> Direct flights only</label>
+                    </div>
+                    <button class="btn" id="searchBtn">SEARCH</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="section" id="booking-options-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showResultsSection()">← Back to Flights</button>
+            <div class="booking-options-card">
+                <h2>How would you like to book?</h2>
+                <div class="btn-group">
+                    <button class="btn" id="selfBookBtn">Make booking by yourself</button>
+                    <button class="btn secondary" id="contactAgentBtn">Contact to travel agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3>Contact Cross Ocean Travel</h3>
+            <p>For personalized assistance with your booking, please contact us:</p>
+            <p><strong>Email:</strong> mubashir@crossoceantravel.co.uk</p>
+            <p><strong>Phone:</strong> 02039255009</p>
+        </div>
+    </div>
+
+    <section class="section" id="auth-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showResultsSection()">← Back to Flights</button>
+            <div class="auth-card">
+                <h2>Login or Sign Up</h2>
+                <button class="btn google-btn" id="continueWithGoogleBtn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.0001 4.75C14.0501 4.75 15.8301 5.43 17.2401 6.84L20.4901 3.59C18.4401 1.54 15.4801 0.25 12.0001 0.25C7.31011 0.25 3.23011 2.92 1.29011 6.76L5.05011 9.77C5.97011 7.09 8.71011 4.75 12.0001 4.75Z" fill="#EA4335"></path> <path d="M12.26 19.74C8.75 19.74 5.8 17.65 4.38 14.54L0.619995 17.56C2.64999 21.6 7.21999 24.25 12.26 24.25C15.82 24.25 18.82 23.01 20.93 21.11L17.51 17.7C16.31 18.78 14.48 19.74 12.26 19.74Z" fill="#34A853"></path> <path d="M23.0001 12.26C23.0001 11.51 22.9301 10.76 22.8101 10.04H12.2401V14.51H18.7201C18.4201 16.03 17.5101 17.26 16.3001 18.04L19.7201 21.45C21.6101 19.73 23.0001 17.13 23.0001 12.26Z" fill="#4285F4"></path> <path d="M12.2401 19.74C14.4601 19.74 16.3101 18.78 17.5101 17.7L20.9301 21.11C18.8201 23.01 15.8201 24.25 12.2601 24.25C7.21011 24.25 2.64011 21.6 0.610107 17.56L4.38011 14.54C5.80011 17.65 8.75011 19.74 12.2401 19.74Z" fill="#FBBC05"></path> </g></svg>
+                    Continue with Google
+                </button>
+                <div class="separator">OR</div>
+                <div id="auth-message" class="message-box"></div>
+                <div class="form-group">
+                    <input type="email" id="auth-email" placeholder="Email Address" />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="auth-password" placeholder="Password" />
+                </div>
+                <button class="btn" id="loginBtn">Login</button>
+                <p>Don't have an account? <a href="#">Sign Up</a></p>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="results-section" style="display: none;">
         <div class="container">
             <button class="back-btn" onclick="showSearchForm()">← Back to Search</button>
@@ -434,31 +720,107 @@
         </div>
     </section>
 
+    <section class="section" id="passenger-form-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showBookingOptions()">← Back to Flight Options</button>
+            <h2 style="margin-bottom: 20px;">Passenger Details</h2>
+            <div id="passenger-forms-container"></div>
+            
+            <h2 style="margin-bottom: 20px; margin-top: 40px;">Contact & Payment Information</h2>
+            <div class="booking-form-card">
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">Full Name</label>
+                            <input type="text" placeholder="As on credit card" />
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">Email Address</label>
+                            <input type="email" placeholder="example@email.com" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">Phone Number</label>
+                            <input type="tel" placeholder="+1 (555) 555-5555" />
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 1px solid #ddd; margin: 30px 0;">
+
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">Card Number</label>
+                            <input type="text" placeholder="•••• •••• •••• ••••" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">Expiration Date</label>
+                            <div class="form-col-dob">
+                                <select aria-label="Month">
+                                    <option value="" disabled selected>MM</option>
+                                    <script>
+                                        for (let i = 1; i <= 12; i++) {
+                                            const month = String(i).padStart(2, '0');
+                                            document.write(`<option value="${month}">${month}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                                <select aria-label="Year">
+                                    <option value="" disabled selected>YY</option>
+                                    <script>
+                                        const currentYear = new Date().getFullYear();
+                                        for (let i = currentYear; i <= currentYear + 10; i++) {
+                                            const year = String(i).slice(2);
+                                            document.write(`<option value="${year}">${year}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="required-label">CVV</label>
+                            <input type="text" placeholder="•••" maxlength="3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="btn" id="confirmBookingBtn">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="about">
         <div class="container about">
             <div class="about-us-content">
                 <div class="text">
                     <h2>About Us</h2>
                     <p>At Cross Ocean Travel, our journey began with a simple, powerful belief: that the world is meant to be explored, and every journey, whether a spiritual pilgrimage or a sun-soaked holiday, should be seamless and unforgettable.</p>
-                    
                     <p>We are a team of passionate travelers who understand that the best adventures are a result of meticulous planning and genuine care. We founded Cross Ocean Travel to provide a bridge between the dream of travel and the reality of a perfectly executed trip.</p>
-                    
                     <h3>Who We Are</h3>
                     <p>We are a dedicated travel service provider specializing in both spiritual pilgrimages and global holiday packages. As an international company, we have a deep understanding of the unique needs of travelers from all walks of life.</p>
-                    
                     <h3>Our Mission & Values</h3>
                     <p><strong>Our Mission:</strong> To empower people to discover the world and achieve their travel goals, with a commitment to reliability, affordability, and unparalleled customer service.</p>
-                    
                     <p><strong>Our Values:</strong></p>
                     <ul>
                         <li><strong>Customer-First Approach:</strong> You are not just a client; you are a guest on a journey we are honored to help you plan. We listen to your needs and preferences to ensure a personalized and satisfying experience.</li>
                         <li><strong>Trust and Reliability:</strong> We are an authorized and approved travel agency, and our reputation is built on transparency and dependability. Your safety and peace of mind are our highest priorities.</li>
                         <li><strong>Excellence in Service:</strong> We believe in going above and beyond. Our team of experienced travel consultants provides expert guidance and support every step of the way, from the first inquiry to your safe return.</li>
                     </ul>
-                    
                     <h3>What We Do</h3>
                     <p>We offer a diverse range of travel experiences designed to meet every budget and desire.</p>
-                    
                     <h3>Why Choose Cross Ocean Travel?</h3>
                     <p><strong>Expert Guidance:</strong> Our team is comprised of seasoned professionals with extensive knowledge of global destinations and travel logistics.</p>
                     <p><strong>Personalized Packages:</strong> We don’t believe in one-size-fits-all. We work with you to create a custom itinerary that perfectly matches your vision.</p>
@@ -466,10 +828,9 @@
                     <p><strong>Seamless Experience:</strong> We take care of all the details, both big and small, so you can embark on your journey with confidence and excitement.</p>
                 </div>
                 <div class="team-image">
-                    <img src="https://images.unsplash.com/photo-1549646535-b2861c28b556?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team members smiling">
+                    <img src="https://images.unsplash.com/photo-1517487816825-7b561b3b27b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Diverse team smiling and working together">
                 </div>
             </div>
-            
             <div class="card featured-card">
                 <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="airline" class="airline-img">
                 <h4 style="margin-top:12px">Featured Airline</h4>
@@ -481,7 +842,11 @@
     <footer>
         <div class="container">
             <div>© <span id="year"></span> Travel Portal — All rights reserved</div>
-            <div>Contact: <a href="mailto:info@travelportal.example">info@travelportal.example</a></div>
+            <div>
+                Contact: 
+                <a href="mailto:mubashir@crossoceantravel.co.uk">mubashir@crossoceantravel.co.uk</a> | 
+                <a href="tel:02039255009">02039255009</a>
+            </div>
         </div>
     </footer>
 
@@ -491,114 +856,85 @@
         // Get references to main elements
         const searchSection = document.getElementById('search-section');
         const resultsSection = document.getElementById('results-section');
+        const authSection = document.getElementById('auth-section');
+        const passengerFormSection = document.getElementById('passenger-form-section');
+        const bookingOptionsSection = document.getElementById('booking-options-section');
         const searchBtn = document.getElementById('searchBtn');
         const flightResultsContainer = document.getElementById('flight-results-container');
         const resultsTitle = document.getElementById('results-title');
         const resultsInfo = document.getElementById('results-info');
         const validationMessage = document.getElementById('validation-message');
+        const passengerFormsContainer = document.getElementById('passenger-forms-container');
+        const aboutSection = document.getElementById('about');
+
+        // References for Auth screen buttons and inputs
+        const continueWithGoogleBtn = document.getElementById('continueWithGoogleBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const authEmailInput = document.getElementById('auth-email');
+        const authPasswordInput = document.getElementById('auth-password');
+        const authMessage = document.getElementById('auth-message');
 
         // References for the new features
-        const tripTypeRadios = document.querySelectorAll('input[name="trip"]');
+        const tripTypeRadios = document.querySelectorAll('input[name="trip-type"]');
         const returnDateColumn = document.getElementById('return-date-column');
+        const paxSelect = document.getElementById('pax');
+        const paxAgeContainer = document.getElementById('pax-age-container'); // NEW reference
+        const selfBookBtn = document.getElementById('selfBookBtn');
+        const contactAgentBtn = document.getElementById('contactAgentBtn');
+        const contactModal = document.getElementById('contact-modal');
+        const closeModalBtn = document.getElementById('close-modal');
 
         // References for the new hamburger menu
         const hamburgerBtn = document.getElementById('hamburger-menu');
         const navLinks = document.getElementById('nav-links');
+
+        // References for form inputs
+        const fromInput = document.getElementById('from');
+        const toInput = document.getElementById('to');
+        const departDateInput = document.getElementById('depart');
+        const returnDateInput = document.getElementById('return');
+        const classSelect = document.getElementById('cls');
 
         // Event listener for the hamburger button
         hamburgerBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
-        // Sample data to simulate an API response
-        const dummyFlightData = [
+        // The unique flight data from your images
+        const uniqueFlightData = [
             {
-                airline: 'Qatar Airways',
-                departureTime: '10:05',
-                arrivalTime: '15:20',
-                departureAirport: 'LHR',
-                arrivalAirport: 'DOH',
-                duration: '6h 15m',
-                price: '$720',
-                details: 'Direct Flight',
-                date: '2025-10-25'
+                airline: 'Azerbaijan Airlines',
+                airlineLogo: 'https://i.ibb.co/b3x2H3f/azerbaijan-airlines.png',
+                flightNumber: 'Flight J28 Budget',
+                departureTime: '21:50',
+                departureDate: '13 Dec',
+                departureAirport: 'London Heathrow',
+                arrivalTime: '12:55',
+                arrivalDate: '14 Dec',
+                arrivalAirport: 'Dubai',
+                totalDuration: '11 hrs 5 mins',
+                connections: '1 connection',
+                stopoverAirport: 'GYD',
+                stopoverDuration: '2 hrs 40 mins',
+                amenities: ['Economy', 'No Hold Luggage'],
+                price: '$720'
             },
             {
-                airline: 'Emirates',
-                departureTime: '11:30',
-                arrivalTime: '17:45',
-                departureAirport: 'DXB',
-                arrivalAirport: 'LHR',
-                duration: '7h 15m',
-                price: '$750',
-                details: 'Direct Flight',
-                date: '2025-11-15'
-            },
-            {
-                airline: 'Turkish Airlines',
-                departureTime: '08:45',
-                arrivalTime: '14:00',
-                departureAirport: 'LHR',
-                arrivalAirport: 'IST',
-                duration: '4h 15m',
-                price: '$680',
-                details: 'Direct Flight',
-                date: '2025-10-25'
-            },
-            {
-                airline: 'British Airways',
-                departureTime: '14:00',
-                arrivalTime: '17:00',
-                arrivalAirport: 'JFK',
-                departureAirport: 'LGW',
-                duration: '8h 00m',
-                price: '$850',
-                details: 'Direct Flight',
-                date: '2025-11-20'
-            },
-            {
-                airline: 'Singapore Airlines',
-                departureTime: '09:00',
-                arrivalTime: '15:30',
-                departureAirport: 'DXB',
-                arrivalAirport: 'SIN',
-                duration: '7h 30m',
-                price: '$920',
-                details: 'Direct Flight',
-                date: '2025-11-15'
-            },
-            {
-                airline: 'Pakistan International Airlines',
-                departureTime: '18:15',
-                arrivalTime: '06:40',
-                departureAirport: 'ISB',
-                arrivalAirport: 'DXB',
-                duration: '4h 25m',
-                price: '$450',
-                details: 'Direct Flight',
-                date: '2025-12-01'
-            },
-            {
-                airline: 'Air India',
-                departureTime: '02:00',
-                arrivalTime: '07:30',
-                departureAirport: 'DEL',
-                arrivalAirport: 'DXB',
-                duration: '3h 00m',
-                price: '$380',
-                details: 'Direct Flight',
-                date: '2025-12-01'
-            },
-            {
-                airline: 'IndiGo',
-                departureTime: '05:45',
-                arrivalTime: '08:15',
-                departureAirport: 'DXB',
-                arrivalAirport: 'BOM',
-                duration: '3h 00m',
-                price: '$300',
-                details: 'Direct Flight',
-                date: '2025-11-15'
+                airline: 'Saudia',
+                airlineLogo: 'https://i.ibb.co/3k8m9m3/saudia-airlines.png',
+                flightNumber: 'Flight SV113',
+                departureTime: '05:00',
+                departureDate: '7 Jan',
+                departureAirport: 'Dubai',
+                arrivalTime: '17:10',
+                arrivalDate: '7 Jan',
+                arrivalAirport: 'London Heathrow',
+                totalDuration: '16 hrs 10 mins',
+                connections: '1 connection',
+                stopoverAirport: 'RUH',
+                stopoverDuration: '6 hrs 35 mins',
+                amenities: ['Economy', 'No Hold Luggage'],
+                price: '$750'
             }
         ];
 
@@ -608,7 +944,7 @@
             "London Gatwick (LGW)",
             "New York JFK (JFK)",
             "New York Newark (EWR)",
-            "Dubai International (DXB)",
+            "Dubai (DXB)",
             "Delhi (DEL)",
             "Mumbai (BOM)",
             "Islamabad (ISB)",
@@ -619,13 +955,13 @@
             "Singapore (SIN)"
         ];
 
-        // New map to easily get IATA code from airport name
+        // Map to easily get IATA code from airport name
         const airportsMap = {
             "London Heathrow (LHR)": "LHR",
             "London Gatwick (LGW)": "LGW",
             "New York JFK (JFK)": "JFK",
             "New York Newark (EWR)": "EWR",
-            "Dubai International (DXB)": "DXB",
+            "Dubai (DXB)": "DXB",
             "Delhi (DEL)": "DEL",
             "Mumbai (BOM)": "BOM",
             "Islamabad (ISB)": "ISB",
@@ -645,7 +981,6 @@
                 a = document.createElement("div");
                 a.setAttribute("class", "autocomplete-items");
                 listContainer.appendChild(a);
-                // Loop through all airports and create a div for each match
                 for (let i = 0; i < airports.length; i++) {
                     const option = airports[i];
                     if (option.toUpperCase().includes(val.toUpperCase())) {
@@ -659,7 +994,6 @@
                     }
                 }
             });
-            // Close the autocomplete list when the user clicks outside of it
             document.addEventListener("click", function (e) {
                 closeAllLists(e.target);
             });
@@ -672,31 +1006,63 @@
                 }
             }
         }
-        // Apply autocomplete to both from and to inputs
-        const fromInput = document.getElementById('from');
-        const fromList = document.getElementById('from-autocomplete-list');
-        setupAutocomplete(fromInput, fromList);
-        const toInput = document.getElementById('to');
-        const toList = document.getElementById('to-autocomplete-list');
-        setupAutocomplete(toInput, toList);
+        setupAutocomplete(fromInput, document.getElementById('from-autocomplete-list'));
+        setupAutocomplete(toInput, document.getElementById('to-autocomplete-list'));
         // --- End of Custom Autocomplete Logic ---
 
-        // Function to show the results section and hide the search form
-        function showResults() {
+        // Function to show the search form and hide others
+        function showSearchForm() {
+            searchSection.style.display = 'flex';
+            resultsSection.style.display = 'none';
+            authSection.style.display = 'none';
+            passengerFormSection.style.display = 'none';
+            bookingOptionsSection.style.display = 'none';
+            aboutSection.style.display = 'flex';
+        }
+
+        // Function to show the results section and hide others
+        function showResultsSection() {
             searchSection.style.display = 'none';
             resultsSection.style.display = 'block';
-            document.getElementById('about').style.display = 'none';
+            authSection.style.display = 'none';
+            passengerFormSection.style.display = 'none';
+            bookingOptionsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
         }
 
-        // Function to show the search form and hide the results section
-        function showSearchForm() {
-            searchSection.style.display = 'block';
+        // Function to show the Login screen
+        function showLoginScreen() {
+            searchSection.style.display = 'none';
             resultsSection.style.display = 'none';
-            document.getElementById('about').style.display = 'flex';
+            authSection.style.display = 'block';
+            passengerFormSection.style.display = 'none';
+            bookingOptionsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
         }
 
-        // Function to generate the flight result cards
-        function generateFlightResults(flights) {
+        // Function to show the booking options screen
+        function showBookingOptions() {
+            searchSection.style.display = 'none';
+            resultsSection.style.display = 'none';
+            authSection.style.display = 'none';
+            passengerFormSection.style.display = 'none';
+            bookingOptionsSection.style.display = 'block';
+            aboutSection.style.display = 'none';
+        }
+
+        // Function to show the passenger form and hide others
+        function showPassengerForm() {
+            searchSection.style.display = 'none';
+            resultsSection.style.display = 'none';
+            authSection.style.display = 'none';
+            passengerFormSection.style.display = 'block';
+            bookingOptionsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
+            generatePassengerForms();
+        }
+
+        // Function to generate the unique flight result cards
+        function generateUniqueFlightResults(flights) {
             flightResultsContainer.innerHTML = '';
             if (flights.length === 0) {
                 flightResultsContainer.innerHTML = '<p class="no-flights-message">No flights found for this route. Please try a different search.</p>';
@@ -704,92 +1070,301 @@
             }
             flights.forEach(flight => {
                 const flightCardHTML = `
-                    <div class="flight-card">
-                        <div class="flight-info">
-                            <div class="airline-details">
-                                <strong>${flight.airline}</strong>
+                    <div class="flight-card unique">
+                        <div class="flight-segment">
+                            <div class="segment-left">
+                                <img src="${flight.airlineLogo}" alt="${flight.airline} logo" class="airline-logo">
+                                <div>
+                                    <strong>${flight.airline}</strong>
+                                    <span>${flight.flightNumber}</span>
+                                </div>
                             </div>
-                            <div class="flight-times">
-                                <div class="flight-leg">
+                            <div class="segment-center">
+                                <div>
                                     <strong>${flight.departureTime}</strong>
-                                    <span>${flight.departureAirport}</span>
+                                    <span>${flight.departureDate}</span>
                                 </div>
-                                <div>→</div>
-                                <div class="flight-leg">
+                                <div class="stopover-info">
+                                    <div class="duration">${flight.totalDuration}</div>
+                                    <div class="line"></div>
+                                    <div class="connection">${flight.connections}</div>
+                                    <div class="stop-details">${flight.stopoverAirport} (${flight.stopoverDuration})</div>
+                                </div>
+                                <div>
                                     <strong>${flight.arrivalTime}</strong>
-                                    <span>${flight.arrivalAirport}</span>
+                                    <span>${flight.arrivalDate}</span>
                                 </div>
                             </div>
-                            <div class="flight-details" style="margin-left:20px; font-size:14px; color:#666;">
-                                ${flight.duration}
-                                <br>
-                                ${flight.details}
+                            <div class="segment-right">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 14.88V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4.12"></path><path d="M16 16l-4-4-4 4"></path><path d="M12 12V3"></path></svg>
+                                    <span>${flight.amenities[0]}</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z"></path><path d="M3 6h18"></path><path d="M16 10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2"></path></svg>
+                                    <span>${flight.amenities[1]}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="price-book" style="margin-top: 10px;">
-                            <div class="price">${flight.price}</div>
-                            <button class="book-btn" style="margin-left: 20px;">Book</button>
+                            <div class="price-col">
+                                <span class="price">${flight.price}</span>
+                                <button class="book-btn">Book</button>
+                            </div>
                         </div>
                     </div>
                 `;
                 flightResultsContainer.insertAdjacentHTML('beforeend', flightCardHTML);
             });
+            // Add event listeners to the new "Book" buttons
+            document.querySelectorAll('.book-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    showBookingOptions(); // Shows the new booking options screen
+                });
+            });
         }
+        
+        // NEW: Add event listeners for login/auth buttons
+        continueWithGoogleBtn.addEventListener('click', showPassengerForm);
+
+        // NEW: Login validation logic
+        loginBtn.addEventListener('click', () => {
+            const correctEmail = 'mubashir@crossoceantravel.co.uk';
+            const correctPassword = '12345'; // Use a simple password for demo
+
+            const enteredEmail = authEmailInput.value;
+            const enteredPassword = authPasswordInput.value;
+
+            if (enteredEmail === correctEmail && enteredPassword === correctPassword) {
+                hideAuthMessage();
+                showPassengerForm();
+            } else {
+                showAuthMessage('Incorrect email or password. Please try again.');
+            }
+        });
+
+        // NEW: Event listeners for booking options screen
+        selfBookBtn.addEventListener('click', showLoginScreen);
+        contactAgentBtn.addEventListener('click', () => {
+            contactModal.style.display = 'block';
+        });
+
+        // Close the modal when the close button is clicked
+        closeModalBtn.addEventListener('click', () => {
+            contactModal.style.display = 'none';
+        });
+
+        // Close the modal when the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            if (event.target == contactModal) {
+                contactModal.style.display = 'none';
+            }
+        }
+
+        function showAuthMessage(message) {
+            authMessage.innerText = message;
+            authMessage.style.display = 'block';
+        }
+        
+        function hideAuthMessage() {
+            authMessage.style.display = 'none';
+        }
+
+        // --- Passenger Form Generation Logic ---
+        function generatePassengerForms() {
+            const numPassengers = parseInt(paxSelect.value, 10);
+            passengerFormsContainer.innerHTML = ''; // Clear previous forms
+
+            for (let i = 1; i <= numPassengers; i++) {
+                const formHTML = `
+                    <div class="passenger-form-card">
+                        <h2>Adult ${i}</h2>
+                        <p>(details should be as shown on passport including middle names)</p>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">Title</label>
+                                    <select>
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">First Name(s)</label>
+                                    <input type="text" placeholder="First Name(s)" />
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">Last Name</label>
+                                    <input type="text" placeholder="Last Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">Date of Birth</label>
+                                    <div class="form-col-dob">
+                                        <select aria-label="Day">
+                                            <option value="" disabled selected>Day</option>
+                                            ${Array.from({length: 31}, (_, i) => `<option value="${i+1}">${i+1}</option>`).join('')}
+                                        </select>
+                                        <select aria-label="Month">
+                                            <option value="" disabled selected>Month</option>
+                                            ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].map((m, idx) => `<option value="${idx+1}">${m}</option>`).join('')}
+                                        </select>
+                                        <select aria-label="Year">
+                                            <option value="" disabled selected>Year</option>
+                                            ${Array.from({length: 100}, (_, i) => { const year = new Date().getFullYear() - i; return `<option value="${year}">${year}</option>`; }).join('')}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">Passport Number</label>
+                                    <input type="text" placeholder="Passport Number" />
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="required-label">Passport Issuing Country</label>
+                                    <select>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                passengerFormsContainer.insertAdjacentHTML('beforeend', formHTML);
+            }
+        }
+        // --- End of Passenger Form Generation Logic ---
+
+        // --- New Search and Validation Logic ---
+        searchBtn.addEventListener('click', () => {
+            // Get user input values
+            const from = fromInput.value.trim();
+            const to = toInput.value.trim();
+            const departDate = departDateInput.value;
+            const returnDate = returnDateInput.value;
+            const tripType = document.querySelector('input[name="trip-type"]:checked').value;
+
+            // Simple validation
+            if (!from || !to || !departDate) {
+                showValidationMessage('Please fill in all required fields.');
+                return;
+            }
+
+            if (from === to) {
+                showValidationMessage('Origin and destination airports cannot be the same.');
+                return;
+            }
+
+            if (tripType === 'return' && !returnDate) {
+                showValidationMessage('Please select a return date for a return trip.');
+                return;
+            }
+
+            const departDateObj = new Date(departDate);
+            const returnDateObj = new Date(returnDate);
+
+            if (returnDate && departDateObj > returnDateObj) {
+                showValidationMessage('Return date cannot be before the departure date.');
+                return;
+            }
+
+            // Hide validation message if validation passes
+            hideValidationMessage();
+
+            // Check if the search is for the hardcoded route
+            const fromCode = airportsMap[from] || '';
+            const toCode = airportsMap[to] || '';
+
+            if (fromCode === 'LHR' && toCode === 'DXB') {
+                generateUniqueFlightResults(uniqueFlightData.filter(flight => flight.airline === 'Azerbaijan Airlines'));
+            } else if (fromCode === 'DXB' && toCode === 'LHR') {
+                 // Simulate a return flight if the destination is LHR
+                const returnFlightData = uniqueFlightData.filter(flight => flight.airline === 'Saudia');
+                generateUniqueFlightResults(returnFlightData);
+            }
+            else {
+                generateUniqueFlightResults([]); // Show no flights found message
+            }
+
+            // Show results section
+            showResultsSection();
+        });
+
+        function showValidationMessage(message) {
+            validationMessage.innerText = message;
+            validationMessage.style.display = 'block';
+        }
+
+        function hideValidationMessage() {
+            validationMessage.style.display = 'none';
+        }
+        // --- End of New Search and Validation Logic ---
 
         // Event listener for the trip type radio buttons
         tripTypeRadios.forEach(radio => {
             radio.addEventListener('change', function() {
-                if (this.value === 'oneway') {
+                if (this.value === 'one-way') {
                     returnDateColumn.style.display = 'none';
+                    returnDateInput.value = ''; // Clear the return date
                 } else {
                     returnDateColumn.style.display = 'block';
                 }
+                hideValidationMessage(); // Hide message on trip type change
             });
         });
+        
+        // NEW: Function to dynamically generate passenger age dropdowns
+        function generatePaxAgeDropdowns() {
+            const numPassengers = parseInt(paxSelect.value, 10);
+            paxAgeContainer.innerHTML = ''; // Clear existing dropdowns
 
-        // Event listener for the search button
-        searchBtn.addEventListener('click', function(event){
-            event.preventDefault(); // Prevents the default form submission
-            const fromInput = document.getElementById('from');
-            const toInput = document.getElementById('to');
-            const depart = document.getElementById('depart');
-            // Validate that required fields are selected
-            if (!fromInput.value || !toInput.value || !depart.value){
-                validationMessage.textContent = 'Please select airports and a departure date.';
-                validationMessage.style.display = 'block';
-                return;
+            // Only show if there's more than one passenger
+            if (numPassengers > 1) {
+                for (let i = 1; i <= numPassengers; i++) {
+                    const ageCol = document.createElement('div');
+                    ageCol.classList.add('age-select-col');
+                    ageCol.innerHTML = `
+                        <label>PAX ${i} AGE:</label>
+                        <select class="passenger-age-input">
+                            ${i === 1 ? '<option>18+</option>' : '<option>1-8</option><option>18+</option>'}
+                            ${Array.from({length: 18}, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join('')}
+                        </select>
+                    `;
+                    paxAgeContainer.appendChild(ageCol);
+                }
+            } else {
+                // If only 1 passenger, show the single age dropdown
+                paxAgeContainer.innerHTML = `
+                    <label>PAX 1 AGE:</label>
+                    <select class="passenger-age-input">
+                        <option>1-8</option>
+                        <option>18+</option>
+                        ${Array.from({length: 18}, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join('')}
+                    </select>
+                `;
             }
-            // Hide the validation message
-            validationMessage.style.display = 'none';
-            // Use the airport map to get the IATA codes from the input values
-            // This is a more robust way to handle user input whether they use autocomplete or not.
-            const fromCode = airportsMap[fromInput.value] || (fromInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
-            const toCode = airportsMap[toInput.value] || (toInput.value.match(/\(([A-Z]{3})\)/) || [])[1];
-            const departDate = depart.value;
-            // Filter the dummy data based on user selection
-            const filteredFlights = dummyFlightData.filter(flight => {
-                return flight.departureAirport === fromCode && flight.arrivalAirport === toCode && flight.date === departDate;
-            });
-            // Update the results header with the selected information
-            resultsTitle.textContent = `${fromInput.value} to ${toInput.value}`;
-            resultsInfo.textContent = `Departing on ${depart.value}`;
-            // Generate and show the results
-            generateFlightResults(filteredFlights);
-            showResults();
-        });
+        }
+        
+        // Initial call to set up the first dropdown on page load
+        generatePaxAgeDropdowns();
+
+        // Add event listener to the passenger count dropdown
+        paxSelect.addEventListener('change', generatePaxAgeDropdowns);
     </script>
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68c429fe3c57f819275d507d/1j4v483gt';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    </body>
+</body>
 </html>
-
-
